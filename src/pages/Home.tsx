@@ -359,56 +359,57 @@ function App({ language, onLanguageChange }: AppProps) {
           <div className="relative z-10 flex h-full items-center justify-center text-center">
             <div className="container-page">
               <div className="mx-auto max-w-4xl px-4">
-                <img
-                  src="/logo1.png"
-                  alt="TJAHYADI CONSULTING"
-                  className="mx-auto h-12 sm:h-16 md:h-20 w-auto mb-4"
-                  decoding="async"
-                  loading="eager"
-                />
-                <h1 className="mt-4 text-2xl font-black leading-tight text-white sm:text-3xl lg:text-5xl">
+                {/* Brand Label */}
+                <div className="text-[#60a5fa] text-sm sm:text-base font-bold tracking-widest mb-6">
+                  TJAHYADI CONSULTING
+                </div>
+
+                {/* Main Heading */}
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white">
                   Registered Tax Consultant
+                  <span className="block mt-2">Member of</span>
                 </h1>
-                <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-                  <div className="text-2xl font-black leading-tight text-white sm:text-3xl lg:text-5xl">
-                    Member of
-                  </div>
+
+                {/* IKPI Logo */}
+                <div className="mt-4 flex justify-center">
                   <img
                     src="/logo_ikpi.png"
                     alt="IKPI"
-                    className="h-10 sm:h-12 md:h-14 w-auto rounded bg-white/95 p-2 shadow"
+                    className="h-12 sm:h-14 md:h-16 w-auto rounded bg-white p-2 shadow-lg"
                     decoding="async"
                     loading="eager"
                   />
                 </div>
 
-                <div className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                {/* Service Buttons - Grid 2x2 on mobile */}
+                <div className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 max-w-md sm:max-w-none mx-auto">
                   <a
                     href="#tax"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
+                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {serviceLabels.tax}
                   </a>
                   <a
-                    href="#accounting"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
-                  >
-                    {serviceLabels.accounting}
-                  </a>
-                  <a
                     href="#payroll"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
+                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {serviceLabels.payroll}
                   </a>
                   <a
+                    href="#accounting"
+                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
+                  >
+                    {serviceLabels.accounting}
+                  </a>
+                  <a
                     href="#legal"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
+                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {serviceLabels.legal}
                   </a>
                 </div>
 
+                {/* Slide Indicators */}
                 <div className="mt-10 flex justify-center gap-3">
                   {slides.map((_, idx) => (
                     <button

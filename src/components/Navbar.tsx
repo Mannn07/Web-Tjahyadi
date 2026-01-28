@@ -72,7 +72,7 @@ export default function Navbar({
           <div
             className={
               "flex items-center justify-between transition-all duration-300 " +
-              (isSolidNav ? "h-20" : "h-28")
+              (isSolidNav ? "h-16 sm:h-20" : "h-20 sm:h-28")
             }
           >
             {/* Logo - Left */}
@@ -80,7 +80,7 @@ export default function Navbar({
               <img
                 src="/logo1.png"
                 alt="TJAHYADI CONSULTING"
-                className="h-16 lg:h-20 w-auto"
+                className="h-12 sm:h-14 lg:h-20 w-auto"
                 decoding="async"
                 loading="eager"
                 style={{ filter: "none" }}
@@ -179,12 +179,12 @@ export default function Navbar({
             {/* Hamburger Menu Button - Mobile (Right side) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
+              className="lg:hidden flex flex-col justify-center items-center w-12 h-12 gap-1.5 border-2 border-white/50 rounded-lg hover:border-white transition-colors"
               aria-label="Open menu"
             >
-              <span className="w-6 h-0.5 bg-white rounded-full" />
-              <span className="w-6 h-0.5 bg-white rounded-full" />
-              <span className="w-6 h-0.5 bg-white rounded-full" />
+              <span className="w-5 h-0.5 bg-white rounded-full" />
+              <span className="w-5 h-0.5 bg-white rounded-full" />
+              <span className="w-5 h-0.5 bg-white rounded-full" />
             </button>
           </div>
         </div>
