@@ -359,9 +359,15 @@ function App({ language, onLanguageChange }: AppProps) {
           <div className="relative z-10 flex h-full items-center justify-center text-center">
             <div className="container-page">
               <div className="mx-auto max-w-4xl px-4">
-                {/* Brand Label */}
-                <div className="text-[#60a5fa] text-sm sm:text-base font-bold tracking-widest mb-6">
-                  TJAHYADI CONSULTING
+                {/* Brand Logo */}
+                <div className="flex justify-center mb-6">
+                  <img
+                    src="/logo1.png"
+                    alt="TJAHYADI CONSULTING"
+                    className="h-16 sm:h-20 md:h-24 w-auto"
+                    decoding="async"
+                    loading="eager"
+                  />
                 </div>
 
                 {/* Main Heading */}
