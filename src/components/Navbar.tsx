@@ -80,9 +80,10 @@ export default function Navbar({
               <img
                 src="/logo1.png"
                 alt="TJAHYADI CONSULTING"
-                className="h-20 lg:h-28 w-auto"
+                className="h-16 lg:h-20 w-auto"
                 decoding="async"
                 loading="eager"
+                style={{ filter: "none" }}
               />
             </a>
 
