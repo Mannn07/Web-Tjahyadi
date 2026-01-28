@@ -78,7 +78,7 @@ export default function Navbar({
             {/* Logo - Left */}
             <a href="/" className="flex items-center">
               <img
-                src={isSolidNav ? "/logo.png" : "/logo1.png"}
+                src="/logo1.png"
                 alt="TJAHYADI CONSULTING"
                 className="h-20 lg:h-28 w-auto"
                 decoding="async"
@@ -242,7 +242,7 @@ export default function Navbar({
           <div className="p-6 pb-4">
             <a href="/" onClick={() => setMobileMenuOpen(false)}>
               <img
-                src="/logo.png"
+                src="/logo1.png"
                 alt="TJAHYADI CONSULTING"
                 className="h-24 w-auto"
               />
