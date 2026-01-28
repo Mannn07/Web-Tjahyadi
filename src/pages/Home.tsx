@@ -358,52 +358,52 @@ function App({ language, onLanguageChange }: AppProps) {
 
           <div className="relative z-10 flex h-full items-center justify-center text-center">
             <div className="container-page">
-              <div className="mx-auto max-w-4xl">
+              <div className="mx-auto max-w-4xl px-4">
                 <img
                   src="/logo1.png"
                   alt="TJAHYADI CONSULTING"
-                  className="mx-auto h-20 sm:h-24 w-auto"
+                  className="mx-auto h-12 sm:h-16 md:h-20 w-auto mb-4"
                   decoding="async"
                   loading="eager"
                 />
-                <h1 className="mt-6 text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
+                <h1 className="mt-4 text-2xl font-black leading-tight text-white sm:text-3xl lg:text-5xl">
                   Registered Tax Consultant
                 </h1>
-                <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4">
-                  <div className="text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
+                <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                  <div className="text-2xl font-black leading-tight text-white sm:text-3xl lg:text-5xl">
                     Member of
                   </div>
                   <img
                     src="/logo_ikpi.png"
                     alt="IKPI"
-                    className="h-14 w-auto rounded bg-white/95 p-2 shadow sm:h-16"
+                    className="h-10 sm:h-12 md:h-14 w-auto rounded bg-white/95 p-2 shadow"
                     decoding="async"
                     loading="eager"
                   />
                 </div>
 
-                <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <div className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                   <a
                     href="#tax"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-sm sm:text-base font-bold px-5 py-2.5"
+                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
                   >
                     {serviceLabels.tax}
                   </a>
                   <a
                     href="#accounting"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-sm sm:text-base font-bold px-5 py-2.5"
+                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
                   >
                     {serviceLabels.accounting}
                   </a>
                   <a
                     href="#payroll"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-sm sm:text-base font-bold px-5 py-2.5"
+                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
                   >
                     {serviceLabels.payroll}
                   </a>
                   <a
                     href="#legal"
-                    className="pill bg-primary text-white hover:bg-primary/90 text-sm sm:text-base font-bold px-5 py-2.5"
+                    className="pill bg-primary text-white hover:bg-primary/90 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5"
                   >
                     {serviceLabels.legal}
                   </a>

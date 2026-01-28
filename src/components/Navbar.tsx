@@ -245,7 +245,7 @@ export default function Navbar({
               <img
                 src="/logo1.png"
                 alt="TJAHYADI CONSULTING"
-                className="h-24 w-auto"
+                className="h-16 w-auto"
               />
             </a>
           </div>
@@ -306,6 +306,7 @@ export default function Navbar({
                   (language === "id" ? "ring-white" : "ring-white/30")
                 }
               />
+              <span className="text-white/80 text-sm">Indonesia</span>
             </button>
             <button
               onClick={() => {
@@ -321,6 +322,23 @@ export default function Navbar({
                   (language === "en" ? "ring-white" : "ring-white/30")
                 }
               />
+              <span className="text-white/80 text-sm">English</span>
+            </button>
+            <button
+              onClick={() => {
+                onLanguageChange("zh");
+              }}
+              className="flex items-center gap-3"
+            >
+              <img
+                src="https://flagcdn.com/w40/cn.png"
+                alt="中文"
+                className={
+                  "h-6 w-9 object-cover rounded-sm ring-1 " +
+                  (language === "zh" ? "ring-white" : "ring-white/30")
+                }
+              />
+              <span className="text-white/80 text-sm">中文</span>
             </button>
           </div>
 
