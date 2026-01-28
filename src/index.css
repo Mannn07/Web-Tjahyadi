@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .about-values-parallax {
+    background-image: url("/hero-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .nav-link {
+    @apply text-sm font-semibold tracking-wide text-white/90 hover:text-primary transition-colors;
+  }
+
+  .nav-link-solid {
+    @apply text-sm font-semibold tracking-wide text-white hover:text-white transition-colors;
+  }
+
+  .pill {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-xs font-bold tracking-widest uppercase shadow-sm transition;
+  }
+
+  .marquee {
+    @apply relative overflow-hidden;
+  }
+
+  .marquee-track {
+    @apply flex w-max items-center gap-10;
+    animation: marquee-scroll 28s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
