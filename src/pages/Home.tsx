@@ -20,7 +20,7 @@ function App({ language, onLanguageChange }: AppProps) {
       height: 22,
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      className: "text-[#181a5c]",
+      className: "text-[#2563eb]",
       "aria-hidden": true as const,
     };
 
@@ -359,9 +359,13 @@ function App({ language, onLanguageChange }: AppProps) {
           <div className="relative z-10 flex h-full items-center justify-center text-center">
             <div className="container-page">
               <div className="mx-auto max-w-4xl">
-                <div className="text-white/90 text-xs font-black tracking-[0.45em] sm:text-sm">
-                  TJAHYADI CONSULTING
-                </div>
+                <img
+                  src="/logo1.png"
+                  alt="TJAHYADI CONSULTING"
+                  className="mx-auto h-20 sm:h-24 w-auto"
+                  decoding="async"
+                  loading="eager"
+                />
                 <h1 className="mt-6 text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
                   Registered Tax Consultant
                 </h1>
@@ -471,28 +475,28 @@ function App({ language, onLanguageChange }: AppProps) {
                   key={card.id}
                   id={card.id}
                   href={`#${card.id}`}
-                  className="group relative block scroll-mt-28 rounded-2xl bg-gradient-to-br from-[#181a5c]/25 via-slate-200 to-[#181a5c]/10 p-[1px] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#181a5c]/40 focus-visible:ring-offset-2"
+                  className="group relative block scroll-mt-28 rounded-2xl bg-gradient-to-br from-[#2563eb]/25 via-slate-200 to-[#2563eb]/10 p-[1px] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb]/40 focus-visible:ring-offset-2"
                 >
                   <div className="rounded-2xl bg-white p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#181a5c]/10 ring-1 ring-[#181a5c]/15 transition duration-300 group-hover:bg-[#181a5c]/15 group-hover:ring-[#181a5c]/25">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2563eb]/10 ring-1 ring-[#2563eb]/15 transition duration-300 group-hover:bg-[#2563eb]/15 group-hover:ring-[#2563eb]/25">
                           <span className="transition duration-300 group-hover:scale-110 group-hover:-rotate-3">
                             <ServiceIcon kind={card.id} />
                           </span>
                         </div>
-                        <div className="text-xs font-black tracking-[0.25em] text-[#181a5c]">
+                        <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
                           SERVICE
                         </div>
                       </div>
 
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 ring-1 ring-slate-200 transition duration-300 group-hover:bg-[#181a5c]/5 group-hover:ring-[#181a5c]/20">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 ring-1 ring-slate-200 transition duration-300 group-hover:bg-[#2563eb]/5 group-hover:ring-[#2563eb]/20">
                         <svg
                           viewBox="0 0 24 24"
                           width="16"
                           height="16"
                           aria-hidden="true"
-                          className="text-slate-500 transition duration-300 group-hover:translate-x-0.5 group-hover:text-[#181a5c]"
+                          className="text-slate-500 transition duration-300 group-hover:translate-x-0.5 group-hover:text-[#2563eb]"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -507,7 +511,7 @@ function App({ language, onLanguageChange }: AppProps) {
                       </div>
                     </div>
 
-                    <div className="mt-4 text-lg font-extrabold text-slate-900 transition duration-300 group-hover:text-[#181a5c]">
+                    <div className="mt-4 text-lg font-extrabold text-slate-900 transition duration-300 group-hover:text-[#2563eb]">
                       {card.title}
                     </div>
 
@@ -515,9 +519,9 @@ function App({ language, onLanguageChange }: AppProps) {
                       {card.desc}
                     </div>
 
-                    <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent transition duration-300 group-hover:via-[#181a5c]/25" />
+                    <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent transition duration-300 group-hover:via-[#2563eb]/25" />
 
-                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-500 transition duration-300 group-hover:text-[#181a5c]">
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-500 transition duration-300 group-hover:text-[#2563eb]">
                       <span>
                         {
                           {
@@ -554,20 +558,20 @@ function App({ language, onLanguageChange }: AppProps) {
 
               <div>
                 <div className="flex items-center gap-3 text-sm text-slate-500">
-                  <span className="h-2 w-2 rounded-full bg-[#181a5c]" />
+                  <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
                   <span className="tracking-wide">{aboutContent.badge}</span>
                 </div>
 
                 <h2 className="mt-3 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
                   {aboutContent.titlePrefix}{" "}
-                  <span className="text-[#181a5c]">
+                  <span className="text-[#2563eb]">
                     {aboutContent.titleBrand}
                   </span>
                 </h2>
 
                 <div className="mt-6 space-y-6 text-slate-600">
                   <p className="leading-relaxed">
-                    <span className="float-left mr-3 mt-1 text-5xl font-extrabold leading-none text-[#181a5c]">
+                    <span className="float-left mr-3 mt-1 text-5xl font-extrabold leading-none text-[#2563eb]">
                       {aboutContent.paragraphs[0].slice(0, 1)}
                     </span>
                     {aboutContent.paragraphs[0].slice(1)}
@@ -583,7 +587,7 @@ function App({ language, onLanguageChange }: AppProps) {
                 <div className="mt-8">
                   <a
                     href="#contact"
-                    className="inline-flex items-center justify-center rounded-full bg-[#181a5c] px-6 py-3 text-sm font-extrabold tracking-wide text-white shadow-sm transition hover:bg-[#181a5c]/90"
+                    className="inline-flex items-center justify-center rounded-full bg-[#2563eb] px-6 py-3 text-sm font-extrabold tracking-wide text-white shadow-sm transition hover:bg-[#2563eb]/90"
                   >
                     {aboutContent.button}
                   </a>
@@ -598,12 +602,12 @@ function App({ language, onLanguageChange }: AppProps) {
           <div className="container-page">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-3 text-sm text-slate-500">
-                <span className="h-2 w-2 rounded-full bg-[#181a5c]" />
+                <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
                 <span className="tracking-wide">{partnerContent.badge}</span>
               </div>
               <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
                 {partnerContent.titleA}{" "}
-                <span className="text-[#181a5c]">{partnerContent.titleB}</span>
+                <span className="text-[#2563eb]">{partnerContent.titleB}</span>
               </h2>
               <p className="mt-4 max-w-3xl text-slate-600">
                 {partnerContent.subtitle}
@@ -634,12 +638,12 @@ function App({ language, onLanguageChange }: AppProps) {
           <div className="container-page">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-3 text-sm text-slate-500">
-                <span className="h-2 w-2 rounded-full bg-[#181a5c]" />
+                <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
                 <span className="tracking-wide">{portfolioContent.badge}</span>
               </div>
               <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
                 {portfolioContent.titleA}{" "}
-                <span className="text-[#181a5c]">
+                <span className="text-[#2563eb]">
                   {portfolioContent.titleB}
                 </span>
               </h2>
@@ -655,7 +659,7 @@ function App({ language, onLanguageChange }: AppProps) {
                 {marqueeItems.map((c, idx) => (
                   <div
                     key={`${c.label}-${idx}`}
-                    className={`flex h-20 w-48 items-center justify-center rounded-2xl bg-gradient-to-b ${c.tone} ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-[#181a5c]/25 hover:shadow-md`}
+                    className={`flex h-20 w-48 items-center justify-center rounded-2xl bg-gradient-to-b ${c.tone} ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-[#2563eb]/25 hover:shadow-md`}
                   >
                     <div className="text-center">
                       <div className="text-xs font-black tracking-[0.35em] text-slate-500">
@@ -673,18 +677,18 @@ function App({ language, onLanguageChange }: AppProps) {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="bg-[#0f123e] py-20 text-white">
+        <section id="testimonials" className="bg-[#1e3a8a] py-20 text-white">
           <div className="container-page">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-3 text-sm text-white/70">
-                <span className="h-2 w-2 rounded-full bg-[#181a5c]" />
+                <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
                 <span className="tracking-wide">
                   {testimonialsContent.badge}
                 </span>
               </div>
               <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
                 {testimonialsContent.titleA}{" "}
-                <span className="text-[#181a5c]">
+                <span className="text-[#60a5fa]">
                   {testimonialsContent.titleB}
                 </span>{" "}
                 {testimonialsContent.titleC}
@@ -699,8 +703,8 @@ function App({ language, onLanguageChange }: AppProps) {
 
               <div className="rounded-3xl border border-white/10 bg-white/5 px-6 py-10 shadow-lg backdrop-blur sm:px-10">
                 <div className="mx-auto flex max-w-4xl flex-col items-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/95 ring-4 ring-[#181a5c]/50">
-                    <div className="text-xl font-black text-[#0f123e]">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/95 ring-4 ring-[#2563eb]/50">
+                    <div className="text-xl font-black text-[#1e3a8a]">
                       {currentTestimonial.company.slice(0, 1).toUpperCase()}
                     </div>
                   </div>
@@ -710,7 +714,7 @@ function App({ language, onLanguageChange }: AppProps) {
                   </p>
 
                   <div className="mt-8 text-center">
-                    <div className="text-[#181a5c] text-lg font-extrabold">
+                    <div className="text-[#60a5fa] text-lg font-extrabold">
                       {currentTestimonial.company}
                     </div>
                     <div className="mt-1 text-sm text-white/70">
@@ -805,7 +809,7 @@ function App({ language, onLanguageChange }: AppProps) {
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
                 <div className="flex items-center gap-3 text-sm text-slate-500">
-                  <span className="h-2 w-2 rounded-full bg-[#181a5c]" />
+                  <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
                   <span className="tracking-wide">
                     {language === "id"
                       ? "Kontak"
@@ -820,7 +824,7 @@ function App({ language, onLanguageChange }: AppProps) {
                     : language === "en"
                       ? "Get in"
                       : "与我们"}{" "}
-                  <span className="text-[#181a5c]">
+                  <span className="text-[#2563eb]">
                     {language === "id"
                       ? "Kami"
                       : language === "en"
@@ -838,7 +842,7 @@ function App({ language, onLanguageChange }: AppProps) {
 
                 <div className="mt-6 grid gap-3 text-sm text-slate-700">
                   <div className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <div className="text-xs font-black tracking-[0.25em] text-[#181a5c]">
+                    <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
                       {language === "id"
                         ? "LOKASI"
                         : language === "en"
@@ -859,11 +863,11 @@ function App({ language, onLanguageChange }: AppProps) {
                     href={whatsAppHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#181a5c]/40 focus-visible:ring-offset-2"
+                    className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb]/40 focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <div className="text-xs font-black tracking-[0.25em] text-[#181a5c]">
+                        <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
                           WHATSAPP
                         </div>
                         <div className="mt-2 font-semibold">
@@ -877,7 +881,7 @@ function App({ language, onLanguageChange }: AppProps) {
                               : "点击立即咨询"}
                         </div>
                       </div>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#181a5c]/10 text-[#181a5c] transition group-hover:bg-[#181a5c]/15">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2563eb]/10 text-[#2563eb] transition group-hover:bg-[#2563eb]/15">
                         →
                       </div>
                     </div>
@@ -886,7 +890,7 @@ function App({ language, onLanguageChange }: AppProps) {
               </div>
 
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-                <div className="text-xs font-black tracking-[0.25em] text-[#181a5c]">
+                <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
                   {language === "id"
                     ? "JAM OPERASIONAL"
                     : language === "en"
@@ -913,7 +917,7 @@ function App({ language, onLanguageChange }: AppProps) {
         </section>
 
         {/* Bottom CTA */}
-        <section className="bg-gradient-to-r from-[#181a5c] to-primary py-16 text-white">
+        <section className="bg-gradient-to-r from-[#1e3a8a] to-primary py-16 text-white">
           <div className="container-page flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -935,7 +939,7 @@ function App({ language, onLanguageChange }: AppProps) {
               href={whatsAppHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-extrabold tracking-wide text-[#181a5c] shadow-lg transition hover:scale-105 hover:bg-white/95"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-extrabold tracking-wide text-[#2563eb] shadow-lg transition hover:scale-105 hover:bg-white/95"
             >
               <svg
                 viewBox="0 0 24 24"

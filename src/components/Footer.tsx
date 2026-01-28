@@ -25,7 +25,7 @@ export default function Footer({ language }: FooterProps) {
         loading="lazy"
         decoding="async"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#07102a]/95 via-[#0f123e]/90 to-primary/90" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/95 via-[#1d4ed8]/90 to-primary/90" />
       <div className="absolute inset-0 bg-black/25" />
 
       <div className="relative container-page">
