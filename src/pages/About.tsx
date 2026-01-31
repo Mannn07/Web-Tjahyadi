@@ -155,7 +155,7 @@ function About({ language, onLanguageChange }: AboutProps) {
                   y1="0"
                   x2="0"
                   y2="20"
-                  stroke="#243B8A"
+                  stroke="#1b1f6a"
                   strokeWidth="2"
                 />
               </pattern>
@@ -167,7 +167,7 @@ function About({ language, onLanguageChange }: AboutProps) {
             <div className="grid items-start gap-12 lg:grid-cols-2">
               <div>
                 <div className="flex items-center gap-3 text-sm text-slate-500">
-                  <span className="h-3 w-3 rounded-full bg-[#243B8A]" />
+                  <span className="h-3 w-3 rounded-full bg-[#1b1f6a]" />
                   <span className="tracking-wide">
                     {language === "id"
                       ? "Tentang Kami"
@@ -178,7 +178,7 @@ function About({ language, onLanguageChange }: AboutProps) {
                 </div>
 
                 <h2 className="mt-3 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
-                  <span className="text-[#243B8A]">Tjahyadi</span>{" "}
+                  <span className="text-[#1b1f6a]">Tjahyadi</span>{" "}
                   {language === "id"
                     ? "Tax & Accounting Service"
                     : language === "en"
@@ -188,7 +188,7 @@ function About({ language, onLanguageChange }: AboutProps) {
 
                 <div className="mt-6 space-y-6 text-slate-600 leading-relaxed">
                   <p>
-                    <span className="float-left mr-3 mt-1 text-6xl font-extrabold leading-none text-[#243B8A]">
+                    <span className="float-left mr-3 mt-1 text-6xl font-extrabold leading-none text-[#1b1f6a]">
                       F
                     </span>
                     {language === "id"
@@ -217,8 +217,8 @@ function About({ language, onLanguageChange }: AboutProps) {
                   decoding="async"
                 />
                 <div className="absolute bottom-8 left-8">
-                  <div className="rounded-3xl bg-[#8bc34a] px-8 py-6 shadow-2xl">
-                    <div className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl">
+                  <div className="rounded-3xl bg-[#1b1f6a] px-8 py-6 shadow-2xl">
+                    <div className="text-2xl font-black leading-tight text-white sm:text-3xl">
                       {language === "id"
                         ? "Kenali Kami"
                         : language === "en"
@@ -242,8 +242,8 @@ function About({ language, onLanguageChange }: AboutProps) {
         <section className="bg-gradient-to-br from-slate-50 via-white to-slate-50 py-20">
           <div className="container-page">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 rounded-full bg-[#243B8A]/10 px-5 py-2 text-sm font-semibold text-[#243B8A]">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-[#243B8A]" />
+              <div className="inline-flex items-center gap-3 rounded-full bg-[#1b1f6a]/10 px-5 py-2 text-sm font-semibold text-[#1b1f6a]">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-[#1b1f6a]" />
                 <span className="tracking-wide">
                   {language === "id"
                     ? "Visi & Misi"
@@ -258,12 +258,12 @@ function About({ language, onLanguageChange }: AboutProps) {
               {/* Vision Card */}
               <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#181a5c] to-primary p-12 text-white shadow-2xl transition hover:-translate-y-2 hover:shadow-3xl">
                 <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
-                <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-[#243B8A]/20 blur-3xl" />
+                <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-[#1b1f6a]/20 blur-3xl" />
 
                 <div className="relative z-10">
                   <div className="inline-flex items-center justify-center rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
                     <svg
-                      className="h-8 w-8 text-[#243B8A]"
+                      className="h-8 w-8 text-[#1b1f6a]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -299,19 +299,19 @@ function About({ language, onLanguageChange }: AboutProps) {
                         : "赋能财务未来，激发信心"}
                   </p>
 
-                  <div className="mt-8 h-1 w-20 rounded-full bg-[#243B8A]" />
+                  <div className="mt-8 h-1 w-20 rounded-full bg-[#1b1f6a]" />
                 </div>
               </div>
 
               {/* Mission Card */}
-              <div className="group relative overflow-hidden rounded-3xl bg-white p-12 shadow-2xl ring-2 ring-slate-100 transition hover:-translate-y-2 hover:shadow-3xl hover:ring-[#243B8A]/20">
-                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#243B8A]/5 blur-3xl" />
+              <div className="group relative overflow-hidden rounded-3xl bg-white p-12 shadow-2xl ring-2 ring-slate-100 transition hover:-translate-y-2 hover:shadow-3xl hover:ring-[#1b1f6a]/20">
+                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#1b1f6a]/5 blur-3xl" />
                 <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-primary/5 blur-3xl" />
 
                 <div className="relative z-10">
-                  <div className="inline-flex items-center justify-center rounded-2xl bg-[#243B8A]/10 p-4">
+                  <div className="inline-flex items-center justify-center rounded-2xl bg-[#1b1f6a]/10 p-4">
                     <svg
-                      className="h-8 w-8 text-[#243B8A]"
+                      className="h-8 w-8 text-[#1b1f6a]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -341,7 +341,7 @@ function About({ language, onLanguageChange }: AboutProps) {
                         : "在 Tjahyadi 税务与会计服务，我们的使命是赋能个人和企业自信地驾驭金融的复杂性。我们努力成为客户财务成功的催化剂，通过提供根植于精确、透明和个性化解决方案的专业税务会计服务。通过持续创新和对卓越的承诺，我们旨在成为将挑战转化为机遇的值得信赖的合作伙伴，确保我们所服务的所有人拥有安全和繁荣的财务未来。"}
                   </p>
 
-                  <div className="mt-8 h-1 w-20 rounded-full bg-[#243B8A]" />
+                  <div className="mt-8 h-1 w-20 rounded-full bg-[#1b1f6a]" />
                 </div>
               </div>
             </div>
@@ -354,14 +354,14 @@ function About({ language, onLanguageChange }: AboutProps) {
           className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/30 py-24"
         >
           {/* Decorative Elements */}
-          <div className="absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#243B8A]/5 blur-3xl" />
+          <div className="absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1b1f6a]/5 blur-3xl" />
           <div className="absolute right-0 bottom-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-primary/5 blur-3xl" />
-          <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#243B8A]/3 to-primary/3 blur-3xl" />
+          <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#1b1f6a]/3 to-primary/3 blur-3xl" />
 
           <div className="container-page relative z-10">
             <div className="mx-auto max-w-4xl text-center">
-              <div className="inline-flex items-center gap-3 rounded-full bg-[#243B8A]/10 px-5 py-2 text-sm font-semibold text-[#243B8A]">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-[#243B8A]" />
+              <div className="inline-flex items-center gap-3 rounded-full bg-[#1b1f6a]/10 px-5 py-2 text-sm font-semibold text-[#1b1f6a]">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-[#1b1f6a]" />
                 <span className="tracking-wide">
                   {language === "id"
                     ? "Mengapa Memilih Kami"
@@ -566,7 +566,7 @@ function About({ language, onLanguageChange }: AboutProps) {
                   <div
                     key={item.title.en}
                     className={
-                      "group relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg ring-1 ring-slate-200/50 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:ring-[#243B8A]/20 " +
+                      "group relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg ring-1 ring-slate-200/50 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:ring-[#1b1f6a]/20 " +
                       delayClass +
                       " " +
                       (whyInView
@@ -584,8 +584,8 @@ function About({ language, onLanguageChange }: AboutProps) {
                     />
 
                     {/* Decorative Blur */}
-                    <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-gradient-to-br from-[#243B8A]/10 to-primary/10 blur-3xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-70" />
-                    <div className="absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-gradient-to-tr from-primary/5 to-[#243B8A]/5 blur-3xl opacity-0 transition-all duration-500 group-hover:opacity-50" />
+                    <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-gradient-to-br from-[#1b1f6a]/10 to-primary/10 blur-3xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-70" />
+                    <div className="absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-gradient-to-tr from-primary/5 to-[#1b1f6a]/5 blur-3xl opacity-0 transition-all duration-500 group-hover:opacity-50" />
 
                     <div className="relative z-10">
                       {/* Icon and Number */}
@@ -605,7 +605,7 @@ function About({ language, onLanguageChange }: AboutProps) {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl font-extrabold leading-tight text-slate-900 transition-colors group-hover:text-[#243B8A]">
+                      <h3 className="text-xl font-extrabold leading-tight text-slate-900 transition-colors group-hover:text-[#1b1f6a]">
                         {item.title[language]}
                       </h3>
 
@@ -623,7 +623,7 @@ function About({ language, onLanguageChange }: AboutProps) {
                             " opacity-60 transition-all duration-300 group-hover:w-20 group-hover:opacity-100"
                           }
                         />
-                        <div className="h-1 w-2 rounded-full bg-slate-300 transition-all duration-300 group-hover:bg-[#243B8A]/50" />
+                        <div className="h-1 w-2 rounded-full bg-slate-300 transition-all duration-300 group-hover:bg-[#1b1f6a]/50" />
                       </div>
                     </div>
                   </div>
@@ -643,7 +643,7 @@ function About({ language, onLanguageChange }: AboutProps) {
           <div className="container-page relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 text-sm text-white/70">
-                <span className="h-3 w-3 rounded-full bg-[#243B8A]" />
+                <span className="h-3 w-3 rounded-full bg-[#1b1f6a]" />
                 <span className="tracking-wide uppercase">
                   {language === "id"
                     ? "Nilai Kami"
@@ -664,7 +664,7 @@ function About({ language, onLanguageChange }: AboutProps) {
             {/* Stats Grid */}
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-20">
               <div className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md p-8 shadow-xl transition hover:-translate-y-2 hover:bg-white/15 border border-white/20">
-                <div className="text-6xl font-black text-[#243B8A] transition group-hover:scale-110">
+                <div className="text-6xl font-black text-[#1b1f6a] transition group-hover:scale-110">
                   {yearsCount}+
                 </div>
                 <div className="mt-3 text-lg font-semibold text-white">
@@ -677,7 +677,7 @@ function About({ language, onLanguageChange }: AboutProps) {
               </div>
 
               <div className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md p-8 shadow-xl transition hover:-translate-y-2 hover:bg-white/15 border border-white/20">
-                <div className="text-6xl font-black text-[#243B8A] transition group-hover:scale-110">
+                <div className="text-6xl font-black text-[#1b1f6a] transition group-hover:scale-110">
                   {teamCount}+
                 </div>
                 <div className="mt-3 text-lg font-semibold text-white">
@@ -690,7 +690,7 @@ function About({ language, onLanguageChange }: AboutProps) {
               </div>
 
               <div className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md p-8 shadow-xl transition hover:-translate-y-2 hover:bg-white/15 border border-white/20">
-                <div className="text-6xl font-black text-[#243B8A] transition group-hover:scale-110">
+                <div className="text-6xl font-black text-[#1b1f6a] transition group-hover:scale-110">
                   {clientsCount}+
                 </div>
                 <div className="mt-3 text-lg font-semibold text-white">
@@ -703,7 +703,7 @@ function About({ language, onLanguageChange }: AboutProps) {
               </div>
 
               <div className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md p-8 shadow-xl transition hover:-translate-y-2 hover:bg-white/15 border border-white/20">
-                <div className="text-6xl font-black text-[#243B8A] transition group-hover:scale-110">
+                <div className="text-6xl font-black text-[#1b1f6a] transition group-hover:scale-110">
                   {projectsCount}+
                 </div>
                 <div className="mt-3 text-lg font-semibold text-white">
@@ -719,9 +719,9 @@ function About({ language, onLanguageChange }: AboutProps) {
             {/* Values Content */}
             <div className="grid gap-8 md:grid-cols-3">
               <div className="group relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur-md p-10 shadow-xl transition hover:-translate-y-2 hover:bg-white/15 border border-white/20">
-                <div className="inline-flex items-center justify-center rounded-xl bg-[#243B8A]/20 p-3 mb-6">
+                <div className="inline-flex items-center justify-center rounded-xl bg-[#1b1f6a]/20 p-3 mb-6">
                   <svg
-                    className="h-8 w-8 text-[#243B8A]"
+                    className="h-8 w-8 text-[#1b1f6a]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -748,13 +748,13 @@ function About({ language, onLanguageChange }: AboutProps) {
                       ? "Trust has always been our vision to be a reliable and dependable partner in your business. Jim Blasingame: 'Trust is a good business practice'"
                       : "信任一直是我们成为您业务可靠合作伙伴的愿景"}
                 </p>
-                <div className="mt-6 h-1 w-16 rounded-full bg-[#243B8A]" />
+                <div className="mt-6 h-1 w-16 rounded-full bg-[#1b1f6a]" />
               </div>
 
               <div className="group relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur-md p-10 shadow-xl transition hover:-translate-y-2 hover:bg-white/15 border border-white/20">
-                <div className="inline-flex items-center justify-center rounded-xl bg-[#243B8A]/20 p-3 mb-6">
+                <div className="inline-flex items-center justify-center rounded-xl bg-[#1b1f6a]/20 p-3 mb-6">
                   <svg
-                    className="h-8 w-8 text-[#243B8A]"
+                    className="h-8 w-8 text-[#1b1f6a]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -781,13 +781,13 @@ function About({ language, onLanguageChange }: AboutProps) {
                       ? "We are committed to providing the highest quality services to our clients. John Lasseter: 'Quality is the best business plan'"
                       : "我们致力于为客户提供最优质的服务。"}
                 </p>
-                <div className="mt-6 h-1 w-16 rounded-full bg-[#243B8A]" />
+                <div className="mt-6 h-1 w-16 rounded-full bg-[#1b1f6a]" />
               </div>
 
               <div className="group relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur-md p-10 shadow-xl transition hover:-translate-y-2 hover:bg-white/15 border border-white/20">
-                <div className="inline-flex items-center justify-center rounded-xl bg-[#243B8A]/20 p-3 mb-6">
+                <div className="inline-flex items-center justify-center rounded-xl bg-[#1b1f6a]/20 p-3 mb-6">
                   <svg
-                    className="h-8 w-8 text-[#243B8A]"
+                    className="h-8 w-8 text-[#1b1f6a]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -814,7 +814,7 @@ function About({ language, onLanguageChange }: AboutProps) {
                       ? "We are engaged and committed to our clients' growth and we always keep our promises. Jean-Paul Sartre: 'Commitment is an ACT, not a word'"
                       : "我们致力于客户的成长，始终信守承诺"}
                 </p>
-                <div className="mt-6 h-1 w-16 rounded-full bg-[#243B8A]" />
+                <div className="mt-6 h-1 w-16 rounded-full bg-[#1b1f6a]" />
               </div>
             </div>
           </div>
@@ -825,7 +825,7 @@ function About({ language, onLanguageChange }: AboutProps) {
           <div className="container-page">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-3 text-sm text-slate-500">
-                <span className="h-3 w-3 rounded-full bg-[#243B8A]" />
+                <span className="h-3 w-3 rounded-full bg-[#1b1f6a]" />
                 <span className="tracking-wide">
                   {language === "id"
                     ? "Our Partners"
@@ -878,11 +878,11 @@ function About({ language, onLanguageChange }: AboutProps) {
                     <div className="text-lg font-extrabold text-slate-900">
                       {partner.name}
                     </div>
-                    <div className="mt-1 text-sm font-bold text-[#243B8A]">
+                    <div className="mt-1 text-sm font-bold text-[#1b1f6a]">
                       {partner.title}
                     </div>
-                    <button className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-[#243B8A]">
-                      <span className="h-2 w-2 rounded-full bg-[#243B8A]" />
+                    <button className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-[#1b1f6a]">
+                      <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
                       {language === "id"
                         ? "LIHAT PROFIL"
                         : language === "en"

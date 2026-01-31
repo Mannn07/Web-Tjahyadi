@@ -5,7 +5,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import ScrollToTop from "../components/ScrollToTop";
 import type { LanguageProps } from "../types";
 
-interface AppProps extends LanguageProps {}
+type AppProps = LanguageProps;
 
 function App({ language, onLanguageChange }: AppProps) {
   const [isSolidNav, setIsSolidNav] = useState(false);
@@ -20,7 +20,7 @@ function App({ language, onLanguageChange }: AppProps) {
       height: 22,
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      className: "text-[#2563eb]",
+      className: "text-[#1b1f6a]",
       "aria-hidden": true as const,
     };
 
@@ -143,6 +143,19 @@ function App({ language, onLanguageChange }: AppProps) {
     legal: { id: "LEGAL", en: "LEGAL", zh: "法律" }[language],
   };
 
+  const heroContent = {
+    headline: {
+      id: "Konsultan Pajak Terdaftar",
+      en: "Registered Tax Consultant",
+      zh: "注册税务顾问",
+    }[language],
+    memberOf: {
+      id: "Anggota",
+      en: "Member of",
+      zh: "会员",
+    }[language],
+  };
+
   const aboutContent = {
     badge: { id: "Tentang Kami", en: "About Us", zh: "关于我们" }[language],
     titlePrefix: { id: "Tentang", en: "About", zh: "关于" }[language],
@@ -172,6 +185,223 @@ function App({ language, onLanguageChange }: AppProps) {
       en: "Tjahyadi Consulting team",
       zh: "Tjahyadi Consulting 团队",
     }[language],
+  };
+
+  const servicesContent = {
+    badge: { id: "Layanan Kami", en: "Our Services", zh: "我们的服务" }[
+      language
+    ],
+    titleA: { id: "Layanan", en: "Our", zh: "我们的" }[language],
+    titleB: { id: "Kami", en: "Services", zh: "服务" }[language],
+    subtitle: {
+      id: "Layanan pajak, akuntansi, payroll, dan legal yang rapi, akurat, serta sesuai regulasi Indonesia.",
+      en: "Reliable tax, accounting, payroll, and legal support—accurate, organized, and compliant with Indonesian regulations.",
+      zh: "提供可靠的税务、会计、薪资与法律支持——精准有序，并符合印尼法规。",
+    }[language],
+    ctaPrefix: { id: "➡️", en: "➡️", zh: "➡️" }[language],
+    details: [
+      {
+        key: "tax",
+        title: { id: "Tax Services", en: "Tax Services", zh: "税务服务" }[
+          language
+        ],
+        paragraphs: {
+          id: [
+            "Kami membantu Anda tetap patuh terhadap kewajiban pajak — akurat dan tepat waktu. Tim kami menangani perhitungan, pelaporan, dan pelaporan pajak sesuai ketentuan perpajakan Indonesia.",
+            "Mulai dari PPN bulanan, PPh Badan, hingga SPT Tahunan, kami pastikan semuanya disampaikan dengan benar dan efisien.",
+            "Kami juga membantu tax planning, pendampingan pemeriksaan, serta penyelesaian sengketa pajak untuk meminimalkan risiko dan mengoptimalkan posisi pajak Anda.",
+          ],
+          en: [
+            "We help you stay on top of your tax obligations — accurately and on time. Our team handles tax calculation, filing, and reporting in compliance with Indonesian tax laws.",
+            "Whether it is monthly VAT, corporate income tax, or annual tax returns, we make sure everything is filed correctly and efficiently.",
+            "We also assist with tax planning, audits, and dispute resolution, helping you minimize risks and optimize your tax position.",
+          ],
+          zh: [
+            "我们协助您准确、准时地完成各项税务义务。团队负责税款计算、申报与报表提交，确保符合印尼税法要求。",
+            "无论是每月增值税（VAT）、企业所得税，还是年度申报，我们都确保流程正确且高效。",
+            "同时，我们提供税务筹划、税务稽核协助与争议处理，帮助您降低风险并优化税务结构。",
+          ],
+        }[language],
+        tagline: {
+          id: "Fokus pada pertumbuhan bisnis Anda, biarkan kami yang mengurus kompleksitas pajak.",
+          en: "Focus on your business growth, and let us deal with the tax complexity.",
+          zh: "专注业务增长，把税务复杂性交给我们。",
+        }[language],
+      },
+      {
+        key: "accounting",
+        title: {
+          id: "Accounting Services",
+          en: "Accounting Services",
+          zh: "会计服务",
+        }[language],
+        paragraphs: {
+          id: [
+            "Keputusan yang baik dimulai dari angka yang baik. Tim akuntansi kami memastikan pencatatan keuangan Anda akurat, rapi, dan sesuai standar akuntansi di Indonesia.",
+            "Kami menyediakan layanan pembukuan, laporan keuangan, management accounts, dan persiapan audit untuk bisnis dari berbagai skala.",
+            "Baik Anda startup maupun perusahaan yang sedang bertumbuh, kami memberikan insight keuangan yang jelas agar Anda bisa merencanakan langkah berikutnya dengan percaya diri.",
+          ],
+          en: [
+            "Good decisions start with good numbers. Our accounting team ensures your financial records are accurate, organized, and compliant with Indonesian accounting standards.",
+            "We provide bookkeeping, financial reporting, management accounts, and audit preparation services for businesses of all sizes.",
+            "Whether you’re a startup or a growing company, we deliver clear financial insights that help you plan ahead with confidence.",
+          ],
+          zh: [
+            "好的决策，来自可靠的数据。我们的会计团队确保您的财务记录准确、有序，并符合印尼会计准则。",
+            "我们提供记账、财务报表、管理报表以及审计准备服务，适用于各规模企业。",
+            "无论您是初创公司还是成长型企业，我们都会提供清晰的财务洞察，帮助您更自信地做规划。",
+          ],
+        }[language],
+        tagline: {
+          id: "Pembukuan akurat. Laporan jelas. Keputusan lebih baik.",
+          en: "Accurate books. Clear reports. Better decisions.",
+          zh: "账目准确，报表清晰，决策更稳。",
+        }[language],
+      },
+      {
+        key: "payroll",
+        title: {
+          id: "Payroll Services",
+          en: "Payroll Services",
+          zh: "薪资服务",
+        }[language],
+        paragraphs: {
+          id: [
+            "Mengelola payroll bisa menyita waktu — apalagi dengan perubahan regulasi pajak dan ketenagakerjaan. Kami menangani perhitungan gaji, pemotongan PPh 21, pelaporan BPJS, serta distribusi payslip dengan data yang aman dan rahasia.",
+            "Tujuan kami membuat payroll Anda lebih smooth, tepat waktu, dan 100% patuh aturan, sehingga karyawan dibayar benar setiap bulan tanpa repot.",
+          ],
+          en: [
+            "Managing payroll can be time-consuming — especially with changing tax and manpower regulations. We take care of salary calculations, tax deductions (PPh 21), BPJS reporting, and payslip distribution, all while keeping your employee data secure and confidential.",
+            "Our goal is to make payroll smooth, timely, and fully compliant, so your employees get paid correctly every month without the hassle.",
+          ],
+          zh: [
+            "薪资管理非常耗时——尤其在税务与人力法规频繁变化的情况下。我们负责工资计算、个人所得税（PPh 21）扣缴情、BPJS 申报与工资单发放，并严格保护员工数据安全与机密。",
+            "我们的目标是让薪资流程稳定、准时、完全合规，让员工每月都能正确领薪，企业零负担。",
+          ],
+        }[language],
+        tagline: {
+          id: "Payroll andal, karyawan senang, zero stress.",
+          en: "Reliable payroll, happy employees, zero stress.",
+          zh: "薪资稳定，员工满意，省心无忧。",
+        }[language],
+      },
+      {
+        key: "legal",
+        title: {
+          id: "Legal & Corporate Administration",
+          en: "Legal & Corporate Administration",
+          zh: "法律与公司行政",
+        }[language],
+        paragraphs: {
+          id: [
+            "Selain angka, kami juga mendukung bisnis Anda melalui layanan legal dan kepatuhan perusahaan. Termasuk pendirian perusahaan, perizinan usaha, perubahan struktur perusahaan, drafting dokumen, hingga pelaporan kepatuhan ke instansi terkait.",
+            "Untuk investor asing dan perusahaan PMA, kami memastikan dokumen serta proses selaras dengan regulasi Indonesia.",
+          ],
+          en: [
+            "Beyond numbers, we also support your business with essential legal and corporate compliance services. This includes company registration, business licenses, changes in company structure, document drafting, and compliance filings with local authorities.",
+            "For foreign investors and PMA companies, we make sure all legal documents and processes align with Indonesian regulations.",
+          ],
+          zh: [
+            "除财务外，我们也提供关键的法律与公司合规支持，包括公司设立、营业许可、公司结构变更、文件起草以及向相关机构提交合规申报。",
+            "针对外资投资人与 PMA 公司，我们确保所有文件与流程符合印尼法规要求。",
+          ],
+        }[language],
+        tagline: {
+          id: "Stay compliant, stay confident — kami urus paperwork-nya.",
+          en: "Stay compliant, stay confident — we’ll handle the paperwork.",
+          zh: "合规更安心，文件流程交给我们。",
+        }[language],
+      },
+    ],
+  };
+
+  const advantageContent = {
+    badge: { id: "KEUNGGULAN", en: "ADVANTAGE", zh: "优势" }[language],
+    titleA: {
+      id: "KENAPA",
+      en: "WHY",
+      zh: "为什么选择",
+    }[language],
+    titleB: "TJAHYADI CONSULTING",
+    subtitle: {
+      id: "Alasan mengapa klien mempercayakan kepatuhan dan administrasi keuangan kepada kami.",
+      en: "Why clients trust us for financial compliance and administration.",
+      zh: "客户选择我们的原因：合规、可靠、沟通清晰。",
+    }[language],
+    items: [
+      {
+        title: {
+          id: "Professional — Accuracy & Confidentiality",
+          en: "Professional — Accuracy & Confidentiality",
+          zh: "专业 — 准确与保密",
+        }[language],
+        desc: {
+          id: "Anda dapat mengandalkan kami untuk menangani angka dengan teliti dan penuh kerahasiaan. Setiap laporan dikerjakan presisi, dan data bisnis Anda dijaga dengan standar keamanan yang tinggi.",
+          en: "Count on us to handle your numbers with care. We work with precision and discretion, keeping your reports accurate and your business data strictly confidential.",
+          zh: "我们以严谨与谨慎处理您的数据：报表准确，信息严格保密，并以高标准保障安全。",
+        }[language],
+      },
+      {
+        title: {
+          id: "Local Tax Expertise",
+          en: "Local Tax Expertise",
+          zh: "本地税务专业能力",
+        }[language],
+        desc: {
+          id: "Peraturan pajak Indonesia kompleks dan terus berubah. Tim ahli pajak kami selalu mengikuti update terbaru agar bisnis Anda tetap patuh dan siap menghadapi masa pelaporan.",
+          en: "Indonesia’s tax rules can be tricky and change often. Our local experts stay up-to-date so your company remains compliant and stress-free.",
+          zh: "印尼税务规则复杂且更新频繁。我们的本地专家持续跟进最新政策，让企业合规更轻松。",
+        }[language],
+      },
+      {
+        title: {
+          id: "End-to-End Financial Services",
+          en: "End-to-End Financial Services",
+          zh: "一站式财务服务",
+        }[language],
+        desc: {
+          id: "Dari pembukuan, payroll, hingga pajak dan administrasi perusahaan — kami tangani semuanya. Anda fokus mengembangkan bisnis, kami yang urus proses di belakang layar.",
+          en: "From bookkeeping and payroll to tax filing and corporate administration — we handle it all. Focus on growth while we take care of the back office.",
+          zh: "从记账、薪资到税务与公司行政，我们都能覆盖，让您专注增长，我们负责后台。",
+        }[language],
+      },
+      {
+        title: {
+          id: "Support for Foreign-Owned Companies (PMA)",
+          en: "Support for Foreign-Owned Companies (PMA)",
+          zh: "外资公司（PMA）支持",
+        }[language],
+        desc: {
+          id: "Menjalankan perusahaan PMA di Indonesia butuh pemahaman aturan lokal. Kami berpengalaman mendampingi perusahaan asing agar proses compliance berjalan lancar dan tepat.",
+          en: "Running a PMA business in Indonesia requires local compliance know-how. We guide foreign-owned companies through processes smoothly and correctly.",
+          zh: "在印尼经营 PMA 需要熟悉当地合规流程。我们具备经验，帮助外资企业顺利落地与运营。",
+        }[language],
+      },
+      {
+        title: {
+          id: "Trilingual Support — English, Bahasa Indonesia, Mandarin",
+          en: "Trilingual Support — English, Bahasa Indonesia, Mandarin",
+          zh: "三语支持 — 英语、印尼语、中文",
+        }[language],
+        desc: {
+          id: "Komunikasi yang jelas membuat semuanya lebih mudah. Tim kami trilingual sehingga Anda bisa berkomunikasi nyaman tanpa miskomunikasi.",
+          en: "Clear communication makes everything easier. Our trilingual team helps bridge language gaps so nothing gets lost in translation.",
+          zh: "清晰沟通让流程更顺畅。我们的三语团队可有效减少语言误差，让合作更安心。",
+        }[language],
+      },
+      {
+        title: {
+          id: "Affordable & Transparent Pricing",
+          en: "Affordable & Transparent Pricing",
+          zh: "价格透明且可负担",
+        }[language],
+        desc: {
+          id: "Tanpa biaya tersembunyi. Harga jelas sejak awal — sederhana, terjangkau, dan transparan, sehingga Anda selalu tahu apa yang Anda bayar.",
+          en: "No hidden fees, no surprises — just honest and upfront pricing. You always know what you’re paying for.",
+          zh: "无隐藏费用、无意外加价。收费清晰透明，让您始终清楚支出内容。",
+        }[language],
+      },
+    ],
   };
 
   const whatsAppNumber = "6287808630658";
@@ -351,33 +581,29 @@ function App({ language, onLanguageChange }: AppProps) {
                 loading="eager"
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute inset-0 bg-primary/12" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#1b1f6a]/30 via-transparent to-[#1b1f6a]/20" />
             </div>
           ))}
 
-          <div className="relative z-10 flex h-full items-center justify-center text-center">
+          <div className="relative z-10 flex h-full items-center justify-center text-center animate-fade-in">
             <div className="container-page">
               <div className="mx-auto max-w-4xl px-4">
-                {/* Brand Logo */}
-                <div className="flex justify-center mb-6">
-                  <img
-                    src="/logo1.png"
-                    alt="TJAHYADI CONSULTING"
-                    className="h-16 sm:h-20 md:h-24 w-auto"
-                    decoding="async"
-                    loading="eager"
-                  />
-                </div>
-
-                {/* Main Heading */}
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white">
-                  Registered Tax Consultant
-                  <span className="block mt-2">Member of</span>
+                {/* Company Name */}
+                <h1 className="text-base sm:text-lg lg:text-xl font-semibold leading-tight text-white mb-4">
+                  TJAHYADI CONSULTING
                 </h1>
 
-                {/* IKPI Logo */}
-                <div className="mt-4 flex justify-center">
+                {/* Main Heading */}
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-white mb-2">
+                  {heroContent.headline}
+                </h2>
+
+                {/* Member of IKPI */}
+                <div className="mt-4 flex items-center justify-center gap-3">
+                  <span className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white">
+                    {heroContent.memberOf}
+                  </span>
                   <img
                     src="/logo_ikpi.png"
                     alt="IKPI"
@@ -391,25 +617,25 @@ function App({ language, onLanguageChange }: AppProps) {
                 <div className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 max-w-md sm:max-w-none mx-auto">
                   <a
                     href="#tax"
-                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
+                    className="flex items-center justify-center rounded-full bg-[#1b1f6a] hover:bg-[#141648] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {serviceLabels.tax}
                   </a>
                   <a
                     href="#payroll"
-                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
+                    className="flex items-center justify-center rounded-full bg-[#1b1f6a] hover:bg-[#141648] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {serviceLabels.payroll}
                   </a>
                   <a
                     href="#accounting"
-                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
+                    className="flex items-center justify-center rounded-full bg-[#1b1f6a] hover:bg-[#141648] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {serviceLabels.accounting}
                   </a>
                   <a
                     href="#legal"
-                    className="flex items-center justify-center rounded-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
+                    className="flex items-center justify-center rounded-full bg-[#1b1f6a] hover:bg-[#141648] text-white text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {serviceLabels.legal}
                   </a>
@@ -436,74 +662,155 @@ function App({ language, onLanguageChange }: AppProps) {
           </div>
         </section>
 
-        {/* Services quick section (below logo/hero) */}
-        <section id="services" className="bg-white py-14">
-          <div className="container-page">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {/* About (after Hero) */}
+        <section id="about" className="relative bg-white py-20">
+          <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#1b1f6a]/5 blur-3xl" />
+          <div className="absolute right-0 bottom-20 h-96 w-96 rounded-full bg-[#1b1f6a]/5 blur-3xl" />
+          <div className="container-page relative">
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <div className="group overflow-hidden rounded-2xl rounded-br-[84px] bg-gradient-to-br from-slate-50 to-slate-100 shadow-lg ring-1 ring-slate-200/50 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
+                <img
+                  src="/hero-1.jpg"
+                  alt={aboutContent.imageAlt}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div>
+                <div className="flex items-center gap-3 text-sm text-slate-500">
+                  <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
+                  <span className="tracking-wide">{aboutContent.badge}</span>
+                </div>
+
+                <h2 className="mt-3 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
+                  {aboutContent.titlePrefix}{" "}
+                  <span className="text-[#1b1f6a]">
+                    {aboutContent.titleBrand}
+                  </span>
+                </h2>
+
+                <div className="mt-6 space-y-6 text-slate-600">
+                  <p className="leading-relaxed">
+                    <span className="float-left mr-3 mt-1 text-5xl font-extrabold leading-none text-[#1b1f6a]">
+                      {aboutContent.paragraphs[0].slice(0, 1)}
+                    </span>
+                    {aboutContent.paragraphs[0].slice(1)}
+                  </p>
+                  <p className="leading-relaxed">
+                    {aboutContent.paragraphs[1]}
+                  </p>
+                  <p className="leading-relaxed">
+                    {aboutContent.paragraphs[2]}
+                  </p>
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href="#contact"
+                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#1b1f6a] px-8 py-3.5 text-sm font-extrabold tracking-wide text-white shadow-lg transition-all duration-300 hover:bg-[#141648] hover:shadow-xl hover:shadow-[#1b1f6a]/30 hover:scale-105"
+                  >
+                    {aboutContent.button}
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Services (after About) */}
+        <section
+          id="services"
+          className="relative bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(27,31,106,0.03),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(27,31,106,0.03),transparent_50%)]" />
+          <div className="container-page relative">
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center gap-3 text-sm text-slate-500">
+                <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
+                <span className="tracking-wide">
+                  💼 {servicesContent.badge}
+                </span>
+              </div>
+
+              <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                {servicesContent.titleA}{" "}
+                <span className="text-[#1b1f6a]">{servicesContent.titleB}</span>
+              </h2>
+              <p className="mt-4 max-w-3xl text-slate-600">
+                {servicesContent.subtitle}
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {[
                 {
                   id: "tax",
                   title: serviceLabels.tax,
                   desc: {
-                    id: "Perencanaan, kepatuhan, dan pendampingan pajak yang rapi.",
-                    en: "Tax planning, compliance, and structured advisory.",
-                    zh: "税务规划、合规与专业顾问服务。",
+                    id: "Kepatuhan, pelaporan, perencanaan, audit, dan sengketa.",
+                    en: "Compliance, filing, planning, audits, and disputes.",
+                    zh: "合规、申报、筹划、稽核与争议处理。",
                   }[language],
                 },
                 {
                   id: "accounting",
                   title: serviceLabels.accounting,
                   desc: {
-                    id: "Pembukuan akurat untuk keputusan bisnis yang lebih cepat.",
-                    en: "Accurate bookkeeping for faster business decisions.",
-                    zh: "精准记账，助力更快的商业决策。",
+                    id: "Pembukuan, laporan, management accounts, persiapan audit.",
+                    en: "Bookkeeping, reporting, management accounts, audit prep.",
+                    zh: "记账、报表、管理报表与审计准备。",
                   }[language],
                 },
                 {
                   id: "payroll",
                   title: serviceLabels.payroll,
                   desc: {
-                    id: "Payroll yang tepat waktu, aman, dan sesuai regulasi.",
-                    en: "On-time, secure, and compliant payroll operations.",
-                    zh: "准时、安全、合规的薪资管理。",
+                    id: "Penggajian, PPh 21, BPJS, payslip, data aman.",
+                    en: "Payroll, PPh 21, BPJS, payslips, secure data.",
+                    zh: "薪资、PPh 21、BPJS、工资单与数据安全。",
                   }[language],
                 },
                 {
                   id: "legal",
                   title: serviceLabels.legal,
                   desc: {
-                    id: "Dukungan legal untuk operasional dan pertumbuhan perusahaan.",
-                    en: "Legal support for operations and company growth.",
-                    zh: "为企业运营与增长提供法律支持。",
+                    id: "Pendirian, perizinan, dokumen, perubahan struktur, compliance.",
+                    en: "Registration, licensing, documents, changes, compliance.",
+                    zh: "设立、许可、文件、变更与合规申报。",
                   }[language],
                 },
               ].map((card) => (
                 <a
                   key={card.id}
-                  id={card.id}
                   href={`#${card.id}`}
-                  className="group relative block scroll-mt-28 rounded-2xl bg-gradient-to-br from-[#2563eb]/25 via-slate-200 to-[#2563eb]/10 p-[1px] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb]/40 focus-visible:ring-offset-2"
+                  className="group relative block rounded-2xl bg-gradient-to-br from-[#1b1f6a]/25 via-[#1b1f6a]/10 to-transparent p-[2px] shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1b1f6a]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b1f6a]/40 focus-visible:ring-offset-2"
                 >
                   <div className="rounded-2xl bg-white p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2563eb]/10 ring-1 ring-[#2563eb]/15 transition duration-300 group-hover:bg-[#2563eb]/15 group-hover:ring-[#2563eb]/25">
-                          <span className="transition duration-300 group-hover:scale-110 group-hover:-rotate-3">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#1b1f6a]/15 to-[#1b1f6a]/5 ring-2 ring-[#1b1f6a]/20 shadow-sm transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-[#1b1f6a] group-hover:to-[#2f36b0] group-hover:ring-[#1b1f6a]/40 group-hover:shadow-md group-hover:scale-110">
+                          <span className="transition-all duration-500 group-hover:scale-100 group-hover:text-white">
                             <ServiceIcon kind={card.id} />
                           </span>
                         </div>
-                        <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
+                        <div className="text-xs font-black tracking-[0.25em] text-[#1b1f6a]">
                           SERVICE
                         </div>
                       </div>
 
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 ring-1 ring-slate-200 transition duration-300 group-hover:bg-[#2563eb]/5 group-hover:ring-[#2563eb]/20">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 ring-1 ring-slate-200 transition duration-300 group-hover:bg-[#1b1f6a]/5 group-hover:ring-[#1b1f6a]/20">
                         <svg
                           viewBox="0 0 24 24"
                           width="16"
                           height="16"
                           aria-hidden="true"
-                          className="text-slate-500 transition duration-300 group-hover:translate-x-0.5 group-hover:text-[#2563eb]"
+                          className="text-slate-500 transition duration-300 group-hover:translate-x-0.5 group-hover:text-[#1b1f6a]"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -518,7 +825,7 @@ function App({ language, onLanguageChange }: AppProps) {
                       </div>
                     </div>
 
-                    <div className="mt-4 text-lg font-extrabold text-slate-900 transition duration-300 group-hover:text-[#2563eb]">
+                    <div className="mt-4 text-lg font-extrabold text-slate-900 transition duration-300 group-hover:text-[#1b1f6a]">
                       {card.title}
                     </div>
 
@@ -526,9 +833,9 @@ function App({ language, onLanguageChange }: AppProps) {
                       {card.desc}
                     </div>
 
-                    <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent transition duration-300 group-hover:via-[#2563eb]/25" />
+                    <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent transition duration-300 group-hover:via-[#1b1f6a]/25" />
 
-                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-500 transition duration-300 group-hover:text-[#2563eb]">
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-500 transition duration-300 group-hover:text-[#1b1f6a]">
                       <span>
                         {
                           {
@@ -546,60 +853,104 @@ function App({ language, onLanguageChange }: AppProps) {
                 </a>
               ))}
             </div>
+
+            <div className="mt-12 grid gap-6">
+              {servicesContent.details.map((s) => (
+                <section
+                  key={s.key}
+                  id={s.key}
+                  className="group scroll-mt-28 relative rounded-3xl border border-slate-200 bg-white p-8 shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-[#1b1f6a]/5 hover:border-[#1b1f6a]/20"
+                >
+                  <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-[#1b1f6a] via-[#1b1f6a]/50 to-transparent rounded-r-full transition-all duration-500 group-hover:w-1.5" />
+                  <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+                    <div className="max-w-3xl">
+                      <div className="flex items-center gap-3 text-sm text-slate-500">
+                        <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
+                        <span className="font-black tracking-[0.25em] text-[#1b1f6a]">
+                          {s.title}
+                        </span>
+                      </div>
+                      <div className="mt-4 space-y-4 text-slate-700">
+                        {s.paragraphs.map((p) => (
+                          <p key={p} className="leading-relaxed">
+                            {p}
+                          </p>
+                        ))}
+                      </div>
+                      <div className="mt-5 rounded-2xl bg-[#1b1f6a]/5 p-4 text-sm font-semibold text-[#1b1f6a]">
+                        {servicesContent.ctaPrefix} {s.tagline}
+                      </div>
+                    </div>
+
+                    <div className="flex shrink-0 items-center justify-start lg:justify-end">
+                      <a
+                        href="#contact"
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#1b1f6a] to-[#2f36b0] px-7 py-3.5 text-sm font-extrabold tracking-wide text-white shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-[#1b1f6a]/40 hover:scale-105"
+                      >
+                        {language === "id"
+                          ? "KONSULTASI"
+                          : language === "en"
+                            ? "CONSULT"
+                            : "咨询"}
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* About */}
-        <section id="about" className="bg-white py-20">
-          <div className="container-page">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="overflow-hidden rounded-2xl rounded-br-[84px] bg-slate-100 shadow-sm">
-                <img
-                  src="/hero-1.jpg"
-                  alt={aboutContent.imageAlt}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
+        {/* Advantage / Why Choose Us */}
+        <section
+          id="advantage"
+          className="relative bg-gradient-to-b from-white via-slate-50/30 to-white py-16 sm:py-20 overflow-hidden"
+        >
+          <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-[#1b1f6a]/5 blur-3xl" />
+          <div className="absolute right-1/4 bottom-0 h-96 w-96 rounded-full bg-[#1b1f6a]/5 blur-3xl" />
+          <div className="container-page relative">
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center gap-3 text-sm text-slate-500">
+                <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
+                <span className="tracking-wide">
+                  🌟 {advantageContent.badge}
+                </span>
               </div>
+              <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                {advantageContent.titleA}{" "}
+                <span className="text-[#1b1f6a]">
+                  {advantageContent.titleB}
+                </span>
+              </h2>
+              <p className="mt-4 max-w-3xl text-slate-600">
+                {advantageContent.subtitle}
+              </p>
+            </div>
 
-              <div>
-                <div className="flex items-center gap-3 text-sm text-slate-500">
-                  <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
-                  <span className="tracking-wide">{aboutContent.badge}</span>
-                </div>
-
-                <h2 className="mt-3 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
-                  {aboutContent.titlePrefix}{" "}
-                  <span className="text-[#2563eb]">
-                    {aboutContent.titleBrand}
-                  </span>
-                </h2>
-
-                <div className="mt-6 space-y-6 text-slate-600">
-                  <p className="leading-relaxed">
-                    <span className="float-left mr-3 mt-1 text-5xl font-extrabold leading-none text-[#2563eb]">
-                      {aboutContent.paragraphs[0].slice(0, 1)}
-                    </span>
-                    {aboutContent.paragraphs[0].slice(1)}
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {advantageContent.items.map((item, idx) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-slate-50/50 to-white p-8 shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1b1f6a]/10 hover:border-[#1b1f6a]/30"
+                >
+                  <div className="absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1b1f6a]/10 to-[#1b1f6a]/5 text-4xl font-black text-[#1b1f6a]/20 ring-4 ring-white transition-all duration-500 group-hover:from-[#1b1f6a]/20 group-hover:to-[#1b1f6a]/10 group-hover:text-[#1b1f6a]/30 group-hover:scale-110">
+                    {String(idx + 1).padStart(2, "0")}
+                  </div>
+                  <div className="text-xs font-black tracking-[0.25em] text-[#1b1f6a]">
+                    {language === "id"
+                      ? "ALASAN"
+                      : language === "en"
+                        ? "WHY"
+                        : "理由"}
+                  </div>
+                  <div className="mt-3 text-lg font-extrabold text-slate-900">
+                    {item.title}
+                  </div>
+                  <p className="mt-3 leading-relaxed text-slate-600">
+                    {item.desc}
                   </p>
-                  <p className="leading-relaxed">
-                    {aboutContent.paragraphs[1]}
-                  </p>
-                  <p className="leading-relaxed">
-                    {aboutContent.paragraphs[2]}
-                  </p>
                 </div>
-
-                <div className="mt-8">
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center justify-center rounded-full bg-[#2563eb] px-6 py-3 text-sm font-extrabold tracking-wide text-white shadow-sm transition hover:bg-[#2563eb]/90"
-                  >
-                    {aboutContent.button}
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -609,12 +960,12 @@ function App({ language, onLanguageChange }: AppProps) {
           <div className="container-page">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-3 text-sm text-slate-500">
-                <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
+                <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
                 <span className="tracking-wide">{partnerContent.badge}</span>
               </div>
               <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
                 {partnerContent.titleA}{" "}
-                <span className="text-[#2563eb]">{partnerContent.titleB}</span>
+                <span className="text-[#1b1f6a]">{partnerContent.titleB}</span>
               </h2>
               <p className="mt-4 max-w-3xl text-slate-600">
                 {partnerContent.subtitle}
@@ -625,12 +976,12 @@ function App({ language, onLanguageChange }: AppProps) {
               {officialPartners.map((p) => (
                 <div
                   key={p.name}
-                  className="flex items-center justify-center rounded-3xl border border-slate-200 bg-white p-10 shadow-sm"
+                  className="group flex items-center justify-center rounded-3xl border border-slate-200 bg-white p-10 shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-[#1b1f6a]/5 hover:border-[#1b1f6a]/20 hover:-translate-y-1"
                 >
                   <img
                     src={p.src}
                     alt={p.alt}
-                    className="max-h-20 w-auto sm:max-h-24"
+                    className="max-h-20 w-auto sm:max-h-24 transition-all duration-500 group-hover:scale-110"
                     loading="lazy"
                     decoding="async"
                   />
@@ -645,12 +996,12 @@ function App({ language, onLanguageChange }: AppProps) {
           <div className="container-page">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-3 text-sm text-slate-500">
-                <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
+                <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
                 <span className="tracking-wide">{portfolioContent.badge}</span>
               </div>
               <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">
                 {portfolioContent.titleA}{" "}
-                <span className="text-[#2563eb]">
+                <span className="text-[#1b1f6a]">
                   {portfolioContent.titleB}
                 </span>
               </h2>
@@ -666,7 +1017,7 @@ function App({ language, onLanguageChange }: AppProps) {
                 {marqueeItems.map((c, idx) => (
                   <div
                     key={`${c.label}-${idx}`}
-                    className={`flex h-20 w-48 items-center justify-center rounded-2xl bg-gradient-to-b ${c.tone} ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-[#2563eb]/25 hover:shadow-md`}
+                    className={`group flex h-24 w-52 items-center justify-center rounded-2xl bg-gradient-to-br ${c.tone} ring-1 ring-slate-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:ring-[#1b1f6a]/30 hover:shadow-lg`}
                   >
                     <div className="text-center">
                       <div className="text-xs font-black tracking-[0.35em] text-slate-500">
@@ -684,20 +1035,23 @@ function App({ language, onLanguageChange }: AppProps) {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="bg-[#1e3a8a] py-20 text-white">
-          <div className="container-page">
+        <section
+          id="testimonials"
+          className="relative bg-gradient-to-br from-[#1b1f6a] via-[#1b1f6a] to-[#2f36b0] py-20 text-white overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="container-page relative">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-3 text-sm text-white/70">
-                <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
+                <span className="h-2 w-2 rounded-full bg-white" />
                 <span className="tracking-wide">
                   {testimonialsContent.badge}
                 </span>
               </div>
               <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
                 {testimonialsContent.titleA}{" "}
-                <span className="text-[#60a5fa]">
-                  {testimonialsContent.titleB}
-                </span>{" "}
+                <span className="text-white">{testimonialsContent.titleB}</span>{" "}
                 {testimonialsContent.titleC}
               </h2>
               <p className="mt-4 max-w-3xl text-white/75">
@@ -706,12 +1060,12 @@ function App({ language, onLanguageChange }: AppProps) {
             </div>
 
             <div className="mt-12 relative mx-auto max-w-5xl">
-              <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent blur-0" />
+              <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-white/15 via-white/5 to-transparent blur-xl" />
 
-              <div className="rounded-3xl border border-white/10 bg-white/5 px-6 py-10 shadow-lg backdrop-blur sm:px-10">
+              <div className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 shadow-2xl backdrop-blur-sm sm:px-10 ring-1 ring-white/10">
                 <div className="mx-auto flex max-w-4xl flex-col items-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/95 ring-4 ring-[#2563eb]/50">
-                    <div className="text-xl font-black text-[#1e3a8a]">
+                  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-white to-slate-50 ring-4 ring-white/30 shadow-xl">
+                    <div className="text-xl font-black text-[#1b1f6a]">
                       {currentTestimonial.company.slice(0, 1).toUpperCase()}
                     </div>
                   </div>
@@ -721,7 +1075,7 @@ function App({ language, onLanguageChange }: AppProps) {
                   </p>
 
                   <div className="mt-8 text-center">
-                    <div className="text-[#60a5fa] text-lg font-extrabold">
+                    <div className="text-white text-lg font-extrabold">
                       {currentTestimonial.company}
                     </div>
                     <div className="mt-1 text-sm text-white/70">
@@ -816,7 +1170,7 @@ function App({ language, onLanguageChange }: AppProps) {
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
                 <div className="flex items-center gap-3 text-sm text-slate-500">
-                  <span className="h-2 w-2 rounded-full bg-[#2563eb]" />
+                  <span className="h-2 w-2 rounded-full bg-[#1b1f6a]" />
                   <span className="tracking-wide">
                     {language === "id"
                       ? "Kontak"
@@ -831,7 +1185,7 @@ function App({ language, onLanguageChange }: AppProps) {
                     : language === "en"
                       ? "Get in"
                       : "与我们"}{" "}
-                  <span className="text-[#2563eb]">
+                  <span className="text-[#1b1f6a]">
                     {language === "id"
                       ? "Kami"
                       : language === "en"
@@ -848,8 +1202,8 @@ function App({ language, onLanguageChange }: AppProps) {
                 </p>
 
                 <div className="mt-6 grid gap-3 text-sm text-slate-700">
-                  <div className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
+                  <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50/50 p-5 shadow-sm ring-1 ring-slate-100">
+                    <div className="text-xs font-black tracking-[0.25em] text-[#1b1f6a]">
                       {language === "id"
                         ? "LOKASI"
                         : language === "en"
@@ -870,11 +1224,11 @@ function App({ language, onLanguageChange }: AppProps) {
                     href={whatsAppHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb]/40 focus-visible:ring-offset-2"
+                    className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50/50 p-5 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#1b1f6a]/10 hover:border-[#1b1f6a]/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b1f6a]/40 focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
+                        <div className="text-xs font-black tracking-[0.25em] text-[#1b1f6a]">
                           WHATSAPP
                         </div>
                         <div className="mt-2 font-semibold">
@@ -888,7 +1242,7 @@ function App({ language, onLanguageChange }: AppProps) {
                               : "点击立即咨询"}
                         </div>
                       </div>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2563eb]/10 text-[#2563eb] transition group-hover:bg-[#2563eb]/15">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#1b1f6a]/10 to-[#1b1f6a]/5 text-[#1b1f6a] ring-1 ring-[#1b1f6a]/20 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-[#1b1f6a] group-hover:to-[#2f36b0] group-hover:text-white group-hover:scale-110 group-hover:shadow-md">
                         →
                       </div>
                     </div>
@@ -896,8 +1250,8 @@ function App({ language, onLanguageChange }: AppProps) {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-                <div className="text-xs font-black tracking-[0.25em] text-[#2563eb]">
+              <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-8 shadow-md ring-1 ring-slate-100">
+                <div className="text-xs font-black tracking-[0.25em] text-[#1b1f6a]">
                   {language === "id"
                     ? "JAM OPERASIONAL"
                     : language === "en"
@@ -924,8 +1278,9 @@ function App({ language, onLanguageChange }: AppProps) {
         </section>
 
         {/* Bottom CTA */}
-        <section className="bg-gradient-to-r from-[#1e3a8a] to-primary py-16 text-white">
-          <div className="container-page flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+        <section className="relative bg-gradient-to-r from-[#1b1f6a] via-[#1b1f6a] to-[#2f36b0] py-16 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_60%)]" />
+          <div className="container-page relative flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                 {language === "id"
@@ -946,7 +1301,7 @@ function App({ language, onLanguageChange }: AppProps) {
               href={whatsAppHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-extrabold tracking-wide text-[#2563eb] shadow-lg transition hover:scale-105 hover:bg-white/95"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-extrabold tracking-wide text-[#1b1f6a] shadow-2xl shadow-black/20 transition-all duration-300 hover:scale-105 hover:bg-white/95 hover:shadow-2xl hover:shadow-white/30"
             >
               <svg
                 viewBox="0 0 24 24"

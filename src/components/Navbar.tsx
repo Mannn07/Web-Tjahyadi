@@ -16,16 +16,16 @@ const NAV_ITEMS = [
     href: "/accounting",
   },
   { label: { id: "PAYROLL", en: "PAYROLL", zh: "薪资" }, href: "/payroll" },
-  { label: { id: "ADVISORY", en: "ADVISORY", zh: "咨询" }, href: "/advisory" },
+  { label: { id: "LEGAL", en: "LEGAL", zh: "法律" }, href: "/legal" },
   {
     label: { id: "TAX TOOL", en: "TAX TOOL", zh: "税务工具" },
     href: "/tax-tool",
     hasDropdown: true,
   },
+  { label: { id: "ARTICLE", en: "ARTICLE", zh: "文章" }, href: "/article" },
   { label: { id: "CAREER", en: "CAREER", zh: "职业" }, href: "/career" },
-  { label: { id: "MEDIA", en: "MEDIA", zh: "媒体" }, href: "/media" },
   {
-    label: { id: "CONTACT", en: "CONTACT", zh: "联系我们" },
+    label: { id: "CONTACT US", en: "CONTACT US", zh: "联系我们" },
     href: "/contact",
   },
 ];
@@ -64,7 +64,7 @@ export default function Navbar({
         className={
           "fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out " +
           (isSolidNav
-            ? "bg-primary/95 backdrop-blur border-b border-white/10"
+            ? "bg-[#2a3f5f]/95 backdrop-blur border-b border-[#1b1f6a]/20 shadow-lg"
             : "bg-transparent")
         }
       >
@@ -80,7 +80,10 @@ export default function Navbar({
               <img
                 src="/logo1.png"
                 alt="TJAHYADI CONSULTING"
-                className="h-12 sm:h-14 lg:h-20 w-auto"
+                className={
+                  "w-auto transition-all duration-300 " +
+                  (isSolidNav ? "h-10 sm:h-12 lg:h-14" : "h-10 sm:h-12 lg:h-14")
+                }
                 decoding="async"
                 loading="eager"
                 style={{ filter: "none" }}
@@ -95,7 +98,9 @@ export default function Navbar({
                   href={item.href}
                   className={
                     "transition-all duration-300 flex items-center gap-1 " +
-                    (isSolidNav ? "nav-link-solid text-sm" : "nav-link text-sm")
+                    (isSolidNav
+                      ? "nav-link-solid text-base"
+                      : "nav-link text-base")
                   }
                 >
                   {item.label[language]}
@@ -119,11 +124,11 @@ export default function Navbar({
             </nav>
 
             {/* Language Selector - Desktop */}
-            <div className="hidden lg:flex items-center gap-1 flex-shrink-0">
+            <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
               <button
                 onClick={() => onLanguageChange("id")}
                 className={
-                  "h-6 w-8 overflow-hidden transition ring-1 rounded-none " +
+                  "h-5 w-7 overflow-hidden transition ring-1 rounded-none " +
                   (language === "id"
                     ? "ring-white"
                     : "ring-white/30 hover:ring-white/50")
@@ -141,7 +146,7 @@ export default function Navbar({
               <button
                 onClick={() => onLanguageChange("en")}
                 className={
-                  "h-6 w-8 overflow-hidden transition ring-1 rounded-none " +
+                  "h-5 w-7 overflow-hidden transition ring-1 rounded-none " +
                   (language === "en"
                     ? "ring-white"
                     : "ring-white/30 hover:ring-white/50")
@@ -159,7 +164,7 @@ export default function Navbar({
               <button
                 onClick={() => onLanguageChange("zh")}
                 className={
-                  "h-6 w-8 overflow-hidden transition ring-1 rounded-none " +
+                  "h-5 w-7 overflow-hidden transition ring-1 rounded-none " +
                   (language === "zh"
                     ? "ring-white"
                     : "ring-white/30 hover:ring-white/50")
@@ -264,8 +269,8 @@ export default function Navbar({
                     className={
                       "flex items-center justify-between py-3 text-base font-semibold tracking-wide transition " +
                       (index === 0
-                        ? "text-[#8bc34a]"
-                        : "text-white/90 hover:text-[#8bc34a]")
+                        ? "text-[#F3F4F6]"
+                        : "text-white/90 hover:text-[#F3F4F6]")
                     }
                   >
                     {item.label[language]}
@@ -347,7 +352,7 @@ export default function Navbar({
 
           {/* Follow Us */}
           <div className="p-6">
-            <div className="text-[#8bc34a] text-sm font-semibold mb-3">
+            <div className="text-[#F3F4F6] text-sm font-semibold mb-3">
               Follow Us :
             </div>
             <div className="flex items-center gap-4">

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,7 @@
 
   body {
     @apply bg-white text-slate-900 antialiased;
+    font-family: "Montserrat", sans-serif;
   }
 }
 
@@ -25,11 +28,11 @@
   }
 
   .nav-link {
-    @apply text-sm font-semibold tracking-wide text-white/90 hover:text-[#60a5fa] transition-colors;
+    @apply text-base font-semibold tracking-wide text-white/90 hover:text-[#7cb342] transition-colors;
   }
 
   .nav-link-solid {
-    @apply text-sm font-semibold tracking-wide text-white hover:text-[#93c5fd] transition-colors;
+    @apply text-base font-semibold tracking-wide text-white/90 hover:text-[#7cb342] transition-colors;
   }
 
   .pill {
@@ -56,5 +59,20 @@
     to {
       transform: translateX(-50%);
     }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
   }
 }
